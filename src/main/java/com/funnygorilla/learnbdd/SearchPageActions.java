@@ -11,20 +11,8 @@ public class SearchPageActions {
         PageFactory.initElements(HelperClass.getDriver(), searchPageLocators);
     }
     
-//    // Get the title of Search Page
-//    public String getLoginTitle() {
-//        return searchPageLocators.titleText.getText();
-//    }
-        
-    // Get the title of Login Page
-    public String getErrorMessage() {
-        return searchPageLocators.errorMessage.getText();
-    }
-       
     public void search(String searchkey) {
-        // Fill user name
         this.setSearchKey(searchkey);
-        // Click Login button
         this.clickSearch();  
     }
     
@@ -34,7 +22,6 @@ public class SearchPageActions {
     	searchPageLocators.searchKey.sendKeys(searchkey);
     }
     
-    // Click on login button
     private void clickSearch() {
     	searchPageLocators.search.click();
     }

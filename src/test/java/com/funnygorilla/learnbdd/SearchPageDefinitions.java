@@ -26,9 +26,6 @@ public class SearchPageDefinitions {
        
     @Then("User should be able to search successfully and new page open")
     public void verifySearch() {
-//    	System.out.println("Search Key --> ["  + searchResultAction.getCourseSearchResult() + "]");
-//    	System.out.println("Contain Search Key?  ["  + searchResultAction.getCourseSearchResult().contains(searchKey) + "]");
-    	
     	Assertions.assertTrue(searchResultAction.getCourseSearchResult().contains(searchKey));
     }
      
@@ -39,8 +36,6 @@ public class SearchPageDefinitions {
     
     @Then("filter has been applied correctly to the chosen course")
     public void verifyFiltering() {
-//    	System.out.println("Search Key --> ["  + searchResultAction.getCourseSearchResult() + "]");
-//    	System.out.println("Contain Search Key?  ["  + searchResultAction.getCourseSearchResult().contains(searchKey) + "]");    	
     	Assertions.assertTrue(searchResultAction.getCourseSearchResult().contains(searchKey));
     }
     
