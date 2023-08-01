@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HelperClass {
     private static HelperClass helperClass;
@@ -19,8 +19,9 @@ public class HelperClass {
     private static WebDriverWait wait;
     public final static int TIMEOUT = 10;
      
-     private HelperClass() {         
-        WebDriverManager.chromedriver().setup();
+     private HelperClass() {
+    	 
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT).toSeconds(), TimeUnit.SECONDS);
         driver.manage().window().maximize();        

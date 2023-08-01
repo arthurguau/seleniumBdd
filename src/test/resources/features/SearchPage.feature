@@ -13,4 +13,5 @@ Background:
   Examples:
   | searchKey   | resultMessage |
   | Advanced Barista Skills | 1 Result for "Advanced Barista Skills" |
+  | Information Technology (Business Analysis) | 2 Results for "Information Technology (Business Analysis)"|
    

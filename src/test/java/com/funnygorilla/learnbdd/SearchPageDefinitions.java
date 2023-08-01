@@ -21,7 +21,6 @@ public class SearchPageDefinitions {
     public void goToSeardh(String searchKey) {
     	this.searchKey = searchKey;
         searchAction.search(searchKey);
-        // go the next page
     }
        
     @Then("User should be able to search successfully and new page open")
