@@ -8,7 +8,7 @@ import org.junit.platform.suite.api.Suite;
 
 /**
  * mvn clean test -Dcucumber.features="src/test/resources/features" -Dwebdriver.chrome.driver="C:\\Opt\\Selenium\\chromedriver.exe"
- * @author cuicui
+ * @author Arthur Gu
  */
 @Suite
 @IncludeEngines("cucumber")

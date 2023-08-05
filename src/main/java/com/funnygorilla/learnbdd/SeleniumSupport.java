@@ -10,23 +10,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HelperClass {
-    private static HelperClass helperClass;
+public class SeleniumSupport {
+    private static SeleniumSupport seleniumSupport;
     
     private static WebDriver driver;
     private static WebDriverWait wait;
     public final static int TIMEOUT = 10;
      
-     private HelperClass() {
+    private SeleniumSupport() {
     	 
-        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT).toSeconds(), TimeUnit.SECONDS);
         driver.manage().window().maximize();        
         wait = new WebDriverWait(driver, TIMEOUT);
-     }      
+    }      
              
     public static void openPage(String url) {
         driver.get(url);
@@ -37,17 +35,17 @@ public class HelperClass {
     }
      
     public static void setUpDriver() {
-        if (helperClass == null) {
-            helperClass = new HelperClass();
+        if (seleniumSupport == null) {
+            seleniumSupport = new SeleniumSupport();
         }
     }
  
     public static void tearDown() {
        if(driver != null) {
-           driver.close();
-           driver.quit();
+          driver.close();
+          driver.quit();
        }
-       helperClass = null;
+       seleniumSupport = null;
    }
     
 	public static void getAWait(String xpath) {
